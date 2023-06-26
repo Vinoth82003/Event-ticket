@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ticket_container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ada7a7;
+  gap: 20px;
+}
+
+.ticketBook {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ada7a7;
+  gap: 10px;
+}
+.ticket {
+  width: 700px;
+  height: 200px;
+  background: #1c1f4b;
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+}
+
+.leftticket {
+  flex-basis: 30%;
+  width: 100%;
+  background: #ffffff;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.border {
+  height: 100%;
+  width: 5px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.topcurve {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ada7a7;
+  /* mix-blend-mode: difference; */
+  margin-top: -200px;
+}
+
+.bottomcurve {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ada7a7;
+  /* mix-blend-mode: difference; */
+  margin-top: 200px;
+}
+
+.dotcontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.dots {
+  width: 3px;
+  height: 7px;
+  background: #000;
+}
+
+.disp {
+  width: 100%;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.numcont {
+  width: 100%;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+
+.numC {
+  display: flex;
+  gap: 10px;
+  margin: 5px;
+}
+
+.num {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #1c1f4b;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  font-size: 12px;
+  color: #ff0000;
+}
+
+.rightticket {
+  flex-basis: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5px;
+  color: #ffffff;
+}
+
+.eventTitle {
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 20px;
+  /* padding: 10px; */
+  margin-top: 10px;
+}
+
+.timing {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.date {
+  padding: 7px;
+  border-bottom: 1px solid;
+  width: 60%;
+}
+
+.ticketNumer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.bigNum {
+  width: 70px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 4px;
+  color: #1c1f4b;
+  font-size: 20px;
+}
+
+.eventDics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p {
+  width: 60%;
+  padding: 10px;
+}
+
+.h1 {
+  text-transform: capitalize;
+}
+
+.book {
+  padding: 10px 20px;
+  background: #1c1f4b;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.error {
+  position: absolute;
+  z-index: 100;
+  background: rgb(159, 238, 159);
+  color: rgb(2, 63, 12);
+  padding: 7px 30px;
+  border-radius: 4px;
+  top: 5px;
+  animation: top 5s ease forwards;
+}
+
+@keyframes top {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50% {
+    opacity: 1;
+    top: 50px;
+  }
+  100%{
+    opacity: 0;
+    top: -50px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .ticket {
+    height: 170px;
+    width: 400px;
+  }
+  .topcurve {
+    margin-top: -170px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottomcurve {
+    margin-top: 170px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .eventTitle,
+  .timing,
+  .ticketNumer {
+    font-size: 10px;
+  }
+
+  .bigNum {
+    width: 25px;
+    height: 20px;
+    font-size: 12px;
+  }
+  .p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ticket {
+    transform: rotate(90deg);
+    width: 450px;
+  }
+}
